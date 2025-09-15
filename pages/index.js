@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const TOTAL_TORRES = 3;
-const ANDARES = 19;
+const ANDARES = 20;
 
 function Home() {
   const [torres, setTorres] = useState({});
