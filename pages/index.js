@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 const TOTAL_TORRES = 3;
-const ANDARES = 20; // 19 andares + térreo
+const ANDARES = 21; // 19 andares + térreo
 
 // Função para exibir o rótulo do andar
 function getAndarLabel(idx) {
