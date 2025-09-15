@@ -89,6 +89,7 @@ function App() {
         Última atualização geral:{" "}
         <strong>{lastUpdate || "nenhuma alteração ainda"}</strong>
       </p>
+      <p>Clique em Com àgua / Sem água do respectivo andar para alterar a informação</p>
 
       {/* 🔹 Mural de mensagens */}
       <div
