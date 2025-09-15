@@ -84,7 +84,7 @@ function App() {
 
   return (
     <div style={{ fontFamily: "Arial", padding: "20px", textAlign: "center" }}>
-      <h1>Monitor de Água - Condomínio</h1>
+      <h1>Monitor de Água - Vila Capri</h1>
       <p>
         Última atualização geral:{" "}
         <strong>{lastUpdate || "nenhuma alteração ainda"}</strong>
