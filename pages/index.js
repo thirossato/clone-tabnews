@@ -76,25 +76,7 @@ function App() {
     return regex.test(novaMensagem);
   }
 
-  // 🔹 Adicionar mensagem no mural
-  const addMuralMessage = () => {
-    if (muralInput.trim() === "") return;
-    const novaMensagem = {
-      texto: muralInput,
-      data: new Date().toLocaleString("pt-BR"),
-      timestamp: Date.now(),
-    };
-    
-    if (contemStatusAgua(novaMensagem.texto.toLowerCase()))
-    {
-      if(confirm("Para informar se seu andar tem água ou não, clique no botão verde ou vermelho do seu andar em sua respectiva torre. Deseja realmente inserir esta atualização no mural?")){
-        push(ref(db, "mural"), novaMensagem);
-      }
-    }else{
-      push(ref(db, "mural"), novaMensagem);
-    }
-    setMuralInput("");
-  };
+  
 
   return (
     <div className="container" style={{ fontFamily: "Arial", padding: "20px", textAlign: "center" }}>
@@ -141,37 +123,7 @@ function App() {
           </div>
         ))}
       </div>
-      {/* 🔹 Mural de mensagens */}
-      <div
-        className="mural-wrapper"
-      >
-        <h2>Mural de Atualizações</h2>
-        <textarea
-          value={muralInput}
-          onChange={(e) => setMuralInput(e.target.value)}
-          placeholder="Escreva uma atualização..."
-        />
-        <br />
-        <button
-          onClick={addMuralMessage}
-          className="btn btn-publicar"
-        >
-          Publicar
-        </button>
-
-        {/* Lista de mensagens */}
-        <div className="mural-list">
-          {muralList.map((msg, idx) => (
-            <div
-              key={idx}
-              className="mural-msg"
-            >
-              <p style={{ margin: "0 0 5px 0" }}>{msg.texto}</p>
-              <small style={{ color: "#666" }}>{msg.data}</small>
-            </div>
-          ))}
-        </div>
-      </div>
+     
 
     </div>
   );
